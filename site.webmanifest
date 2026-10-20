@@ -1,0 +1,30 @@
+{
+  "name": "Wedding Invitation — Dr. Jerin James & Merin M. Joy",
+  "short_name": "Jerin & Merin",
+  "description": "Holy Matrimony of Dr. Jerin James & Merin M. Joy. Crafted by ORYNZA.",
+  "icons": [
+    {
+      "src": "assets/brand/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/brand/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/brand/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/brand/orynza-favicon-mark.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#14251D",
+  "background_color": "#F8F5EE",
+  "display": "standalone"
+}
