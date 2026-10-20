@@ -33,6 +33,7 @@ JERIN-MERIN-WEDDING/
 │   ├── translations.js        # Multilingual translations (en, ml, ta, hi)
 │   └── main.js                # Form submission, music player, countdown, and animations
 ├── assets/
+│   ├── brand/                 # ORYNZA brand identity marks
 │   ├── coupleimage.jpeg       # Couple portrait artwork
 │   └── weddingmusic.mp3       # Background instrumental audio
 ├── google-apps-script/

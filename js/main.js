@@ -897,7 +897,10 @@
         submitBtn.disabled = true;
         submitBtn.setAttribute('aria-busy', 'true');
       }
-      showFeedback(t('formSubmitting') || 'Connecting to wedding registry...', 'loading');
+      showFeedback(`
+        <span class="rsvp-loading-spinner" aria-hidden="true"></span>
+        <span>${t('formSubmitting') || 'Connecting to wedding registry...'}</span>
+      `, 'loading');
 
       try {
         if (endpoint && endpoint.startsWith('http')) {
@@ -932,9 +935,20 @@
               : (t('successDeclined') || 'We received your note with gratitude. Your prayers and blessings are warmly appreciated.');
 
             showFeedback(`
-              <strong>${prefix} ${escapeHtml(nameVal)}!</strong><br>
-              ${suffix} <strong>${summaryText}</strong> ${savedNote}<br>
-              ${celebrationNote}
+              <div class="rsvp-feedback-success-inner">
+                <div class="rsvp-success-icon-wrap" aria-hidden="true">
+                  <svg class="rsvp-success-check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+                <h3 class="rsvp-success-title">${prefix} ${escapeHtml(nameVal)}!</h3>
+                <div class="rsvp-success-summary-box">
+                  <div class="rsvp-summary-line"><span class="rsvp-summary-label">${suffix}</span> <span class="rsvp-summary-events">${summaryText}</span></div>
+                  <div class="rsvp-summary-note">${savedNote}</div>
+                </div>
+                <p class="rsvp-success-note">${celebrationNote}</p>
+              </div>
             `, 'success');
 
             // Celebratory confetti burst
@@ -956,7 +970,12 @@
 
           } else {
             const serverMsg = result && result.message ? result.message : (t('errorServer') || 'Unable to save attendance details.');
-            showFeedback(escapeHtml(serverMsg), 'error');
+            showFeedback(`
+              <div class="rsvp-feedback-error-inner">
+                <div class="rsvp-error-icon-wrap" aria-hidden="true">⚠️</div>
+                <h3 class="rsvp-error-title">${escapeHtml(serverMsg)}</h3>
+              </div>
+            `, 'error');
             if (submitBtn) {
               submitBtn.disabled = false;
               submitBtn.removeAttribute('aria-busy');
@@ -964,7 +983,12 @@
           }
 
         } else {
-          showFeedback('Attendance registry endpoint is not configured. Please contact our family coordinators below.', 'error');
+          showFeedback(`
+            <div class="rsvp-feedback-error-inner">
+              <div class="rsvp-error-icon-wrap" aria-hidden="true">⚠️</div>
+              <h3 class="rsvp-error-title">Attendance registry endpoint is not configured. Please contact our family coordinators below.</h3>
+            </div>
+          `, 'error');
           if (submitBtn) {
             submitBtn.disabled = false;
             submitBtn.removeAttribute('aria-busy');
@@ -980,14 +1004,17 @@
         const fallbackUrl = `https://wa.me/${coordPhone}?text=${waText}`;
 
         showFeedback(`
-          <strong>${t('errorNetwork') || 'Notice: Connection Issue Encountered'}</strong><br>
-          ${t('errorNetworkDetail') || 'We could not reach the attendance registry to save your details automatically.'}<br>
-          <span style="font-size:0.85rem; display:block; margin-block:0.5rem;">
-            ${t('errorNetworkFallback') || 'Your response was not yet recorded in the spreadsheet. You can retry now, or send your attendance directly to our family coordinator via WhatsApp:'}
-          </span>
-          <a href="${fallbackUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-shine" style="margin-top:0.5rem; padding:0.5rem 1.25rem; font-size:0.85rem; display:inline-flex;">
-            ${t('errorNetworkWABtn') || 'Send Details to Coordinator on WhatsApp'}
-          </a>
+          <div class="rsvp-feedback-error-inner">
+            <div class="rsvp-error-icon-wrap" aria-hidden="true">⚠️</div>
+            <h3 class="rsvp-error-title">${t('errorNetwork') || 'Notice: Connection Issue Encountered'}</h3>
+            <p style="margin:0.25rem 0 0.5rem; color:#842029;">${t('errorNetworkDetail') || 'We could not reach the attendance registry to save your details automatically.'}</p>
+            <p style="font-size:0.875rem; margin:0 0 0.75rem; color:#842029;">
+              ${t('errorNetworkFallback') || 'Your response was not yet recorded in the spreadsheet. You can retry now, or send your attendance directly to our family coordinator via WhatsApp:'}
+            </p>
+            <a href="${fallbackUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-shine" style="padding:0.6rem 1.25rem; font-size:0.875rem; display:inline-flex; align-items:center; gap:0.5rem;">
+              <span>💬</span> ${t('errorNetworkWABtn') || 'Send Details to Coordinator on WhatsApp'}
+            </a>
+          </div>
         `, 'error');
 
         if (submitBtn) {
