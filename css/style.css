@@ -2063,60 +2063,111 @@ dialog::backdrop {
   color: #A0AAB0;
 }
 
-/* --- Subtle ORYNZA Creative Studio Signature in Footer --- */
+/* --- Refined ORYNZA Creative Studio Signature in Footer --- */
 .footer-orynza-brand {
-  margin-top: 1.75rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid rgba(197, 161, 90, 0.18);
-  display: inline-flex;
-  flex-direction: row;
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.65rem;
-  opacity: 0.85;
-  transition: opacity 0.25s ease;
+  position: relative;
+  text-align: center;
 }
 
-.footer-orynza-brand:hover {
-  opacity: 1;
+/* Subtle, elegant center-weighted divider separating wedding content */
+.footer-orynza-brand::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  max-width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(197, 161, 90, 0.45) 50%, transparent 100%);
 }
 
-.orynza-signature-prefix {
+.orynza-tagline {
   font-family: var(--font-sans);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  color: #9EABA5;
-  font-weight: 400;
-  text-transform: none;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold-hover, #D8B268);
+  opacity: 0.95;
+  margin: 0;
+  line-height: 1;
 }
 
 .orynza-logo-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  min-width: 44px;
-  padding: 0.2rem 0.5rem;
+  min-height: 48px;
+  min-width: 48px;
+  padding: 0.35rem 0.85rem;
   border-radius: var(--radius-sm, 8px);
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
 }
 
 .orynza-logo-link:hover {
-  transform: translateY(-1px);
-  opacity: 1;
+  transform: translateY(-2px);
+  opacity: 0.95;
 }
 
 .orynza-logo-link:focus-visible {
   outline: 2px solid var(--color-turquoise-vibrant, #40C4C6);
-  outline-offset: 3px;
+  outline-offset: 4px;
 }
 
 .orynza-logo-img {
-  width: auto;
-  height: 24px;
-  max-width: 88px;
+  width: 150px;
+  height: auto;
+  max-width: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.35));
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
+  transition: filter 0.25s ease;
+}
+
+.orynza-logo-link:hover .orynza-logo-img {
+  filter: drop-shadow(0 4px 14px rgba(64, 196, 198, 0.22)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
+}
+
+.orynza-subtag {
+  font-family: var(--font-serif-body);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #A9B7B0;
+  letter-spacing: 0.025em;
+  margin: 0;
+  line-height: 1.4;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 640px) {
+  .footer-orynza-brand {
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
+    gap: 0.55rem;
+  }
+
+  .orynza-logo-img {
+    width: 130px;
+  }
+
+  .orynza-subtag {
+    font-size: 0.84rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orynza-logo-link,
+  .orynza-logo-img {
+    transition: none !important;
+    transform: none !important;
+  }
 }
 
 /* --- Scroll Reveal Animations --- */
