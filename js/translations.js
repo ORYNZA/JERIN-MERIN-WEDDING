@@ -75,7 +75,7 @@ const TRANSLATIONS = {
     getDirectionsChurch: 'Get Directions to Church',
     getDirectionsReception: 'Get Directions to Reception',
     getDirectionsEngagementChurch: 'Get Directions to Church',
-    getDirectionsEngagementReception: 'View Venue Details / Directions',
+    getDirectionsEngagementReception: 'Get Directions to Reception',
 
     /* Event Groups & Cards */
     engagementGroupTag: '💍 PRE-WEDDING CELEBRATION',
@@ -294,7 +294,7 @@ const TRANSLATIONS = {
     getDirectionsChurch: 'ദേവാലയത്തിലേക്ക് വഴി',
     getDirectionsReception: 'വിരുന്ന് വേദിയിലേക്ക് വഴി',
     getDirectionsEngagementChurch: 'ദേവാലയത്തിലേക്ക് വഴി',
-    getDirectionsEngagementReception: 'വേദി കാണുക / വഴി കണ്ടെത്തുക',
+    getDirectionsEngagementReception: 'വിരുന്ന് വേദിയിലേക്ക് വഴി',
 
     /* Event Groups & Cards */
     engagementGroupTag: '💍 വിവാഹ നിശ്ചയാഘോഷം',
@@ -511,7 +511,7 @@ const TRANSLATIONS = {
     getDirectionsChurch: 'தேவாலயத்திற்கான வழித்தடம்',
     getDirectionsReception: 'வரவேற்பு மண்டபத்திற்கான வழித்தடம்',
     getDirectionsEngagementChurch: 'தேவாலயத்திற்கான வழித்தடம்',
-    getDirectionsEngagementReception: 'நிகழ்விட விவரங்கள் & வழித்தடம் பார்க்க',
+    getDirectionsEngagementReception: 'வரவேற்பு மண்டபத்திற்கான வழித்தடம்',
 
     /* Event Groups & Cards */
     engagementGroupTag: '💍 நிச்சயதார்த்த விழா',
@@ -728,7 +728,7 @@ const TRANSLATIONS = {
     getDirectionsChurch: 'चर्च का मार्ग देखें',
     getDirectionsReception: 'प्रीतिभोज स्थल का मार्ग देखें',
     getDirectionsEngagementChurch: 'चर्च का मार्ग देखें',
-    getDirectionsEngagementReception: 'स्थान विवरण / मार्ग देखें',
+    getDirectionsEngagementReception: 'प्रीतिभोज स्थल का मार्ग देखें',
 
     /* Event Groups & Cards */
     engagementGroupTag: '💍 सगाई समारोह',

@@ -16,7 +16,7 @@ A premium, responsive, accessible, and high-performance single-page Christian we
   * Groom's Parents: **Mr. James D & Mrs. Rosilin James**  
     *Address*: Karikkathil Thekkethil Veedu, Andoor P.O., Cheruvalloor, Kollam
   * Bride's Parents: **Mr. Joy & Mrs. Mini Joy**  
-    *Address*: Puthenparambu Veedu, Vakamon P.O., Lakkoor, Pathanamthitta
+    *Address*: Puthenparambil House, Lakkoor, Vellapara P.O., Pathanamthitta
 * **Bible Verse**:
   > “The Lord has done great things for us, and we are filled with joy.” — Psalms 126:3
 * **Venues & Exact Map Links**:
@@ -28,7 +28,7 @@ A premium, responsive, accessible, and high-performance single-page Christian we
 * **RSVP & Attendance System**: Connected to Google Sheets via Google Apps Script Web App (`Attendance Responses` sheet in spreadsheet `19S0UbbDwlOiemQiBegZC7wCawXr5zLi91_AmbSsNejY`).
   * Contact Validation: Full Name required. Email and Mobile are optional individually, but at least one must be provided.
   * Separate Attendance Options: Engagement Ceremony (21 Jan 2027) and Wedding Ceremony & Reception (1 Feb 2027), with conditional attendee counts (1–100).
-* **QR Code & Website URL**: The QR code and WhatsApp share link use the published URL at runtime (`window.location.href`). Live at `https://jebin-james.github.io/jerin-wedding/`.
+* **QR Code & Website URL**: The QR code and WhatsApp share link use the published URL at runtime (`window.location.href`). Live at `https://orynza.github.io/JERIN-MERIN-WEDDING/`.
 
 ## Tech Stack & Architecture Guidelines
 * **Zero Heavy Frameworks**: Pure vanilla HTML5, CSS3, and modern ES6+ JavaScript.

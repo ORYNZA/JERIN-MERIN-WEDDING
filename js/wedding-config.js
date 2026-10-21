@@ -15,7 +15,7 @@ const WEDDING_CONFIG = {
     bride: "Merin M. Joy",
     brideShort: "Merin",
     brideParents: "Mr. Joy & Mrs. Mini Joy",
-    brideAddress: "Puthenparambu Veedu, Vakamon P.O., Lakkoor, Pathanamthitta",
+    brideAddress: "Puthenparambil House, Lakkoor, Vellapara P.O., Pathanamthitta",
     
     monogram: "J & M"
   },
@@ -87,7 +87,7 @@ const WEDDING_CONFIG = {
       mapUrl: "https://maps.app.goo.gl/fidEYTTP5AiHz5AG9",
       badgeClass: "badge-engagement-reception",
       icon: "toast",
-      directionsLabel: "View Venue Details / Directions",
+      directionsLabel: "Get Directions to Reception",
       i18nTitleKey: "eventEngagementReceptionTitle",
       i18nSubtitleKey: "eventEngagementReceptionSubtitle",
       i18nBadgeKey: "eventEngagementReceptionBadge",
